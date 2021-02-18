@@ -104,15 +104,3 @@ function mailLib.destroyMail(mail)
 		end
 	end
 end
-mail1,mail2 = "abcabusolo1","@taptap.icu"
-mailLib.applyMail(mail1..mail2)
-while true do
-	local zt,nr = mailLib.getMail(mail1..mail2)
-	if zt then
-		local str = mailLib.checkMail(mail1,nr)
-		if str then
-			mailLib.destroyMail(mail1..mail2)
-		end
-	end
-	mSleep(5000)
-end
